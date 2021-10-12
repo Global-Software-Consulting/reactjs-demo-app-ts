@@ -1,4 +1,5 @@
 import { Grid } from '@mui/material';
+
 import { Counter } from '../features/counter/Counter';
 
 function App() {
