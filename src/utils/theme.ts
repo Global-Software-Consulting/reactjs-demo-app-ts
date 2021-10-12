@@ -3,7 +3,7 @@ import { createTheme } from '@mui/material/styles'
 
 let allThemes : Array<PaletteMode>=['light', 'dark']
 export const themes = allThemes.map((mode: PaletteMode) => {
-  console.log('mode', mode)
+  
   return createTheme(
     {
       palette: {
@@ -13,8 +13,7 @@ export const themes = allThemes.map((mode: PaletteMode) => {
         },
         background: {
           default: mode === 'light' ? '#fff' : 'rgb(24,25,26)'
-        },
-       
+        },       
       },
 
       typography: {

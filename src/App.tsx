@@ -1,57 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
-
+import React, { useState, useEffect } from 'react';
+import { ThemeProvider } from '@mui/material/styles';
+import { ColorModeContext } from './utils/context';
+import { themes } from './utils/theme';
+import AppRouting from './routes';
 function App() {
+  const [theme, setTheme] = useState(themes[0]);
+  const [mode, setMode] = React.useState('light');
+
+  const colorMode = React.useMemo(
+    () => ({
+      toggleColorMode: () => {
+        console.log('change color');
+        setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
+      },
+    }),
+    []
+  );
+
+  useEffect(() => {
+    setTheme(mode === 'light' ? themes[0] : themes[1]);
+  }, [mode]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+    <ColorModeContext.Provider value={colorMode}>
+      <ThemeProvider theme={theme}>
+        <AppRouting />
+      </ThemeProvider>
+    </ColorModeContext.Provider>
   );
 }
 
