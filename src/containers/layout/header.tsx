@@ -12,14 +12,12 @@ import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import { useTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
-import { useDispatch } from 'react-redux';
 // import LanguagePopover from '../../components/LanguagePopover';
 // import { changeLanguage } from '../../redux/actions/settings';
 import { ColorModeContext } from '../../utils/context';
 
 function Header() {
   const history = useHistory();
-  const dispatch = useDispatch();
   const theme = useTheme();
   const [translation, i18n] = useTranslation('translations');
   const colorMode = React.useContext(ColorModeContext);
