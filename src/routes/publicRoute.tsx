@@ -11,7 +11,5 @@ const PublicRoutes = ({ component, ...rest }: any) => {
     );
   return <Route {...rest} render={routeComponent} />;
 };
-PublicRoutes.propTypes = {
-  component: PropTypes.element,
-};
+
 export default PublicRoutes;

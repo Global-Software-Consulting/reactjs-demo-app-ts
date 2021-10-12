@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from '../pages';
 import Grid from '@mui/material/Grid';
 import CssBaseline from '@mui/material/CssBaseline';
+import ProtectedRoute from './protectedRoute';
 
 function Routes() {
   return (
@@ -10,7 +11,7 @@ function Routes() {
       <Grid container>
         <CssBaseline />
         <Switch>
-          <Route exact path='/' component={Home} />
+          <ProtectedRoute exact path='/' component={Home} />
         </Switch>
       </Grid>
     </Router>
