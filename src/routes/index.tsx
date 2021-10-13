@@ -4,6 +4,7 @@ import Home from '../pages';
 import Dashboard from '../pages/dashboard';
 import Grid from '@mui/material/Grid';
 import CssBaseline from '@mui/material/CssBaseline';
+import ProtectedRoute from './protectedRoute';
 
 function Routes() {
   return (
@@ -12,7 +13,8 @@ function Routes() {
         <CssBaseline />
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route exact path='/dashboard' component={Dashboard} />
+          <ProtectedRoute exact path='/dashboard' component={Dashboard} />
+          <ProtectedRoute exact path='/' component={Home} />
         </Switch>
       </Grid>
     </Router>

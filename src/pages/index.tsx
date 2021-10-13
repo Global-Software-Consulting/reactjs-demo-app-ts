@@ -2,7 +2,7 @@ import { Grid } from '@mui/material';
 
 import { Counter } from '../features/counter/Counter';
 
-function App() {
+const Home: React.FC = () => {
   return (
     <Grid container className='App'>
       <header className='App-header'>
@@ -51,6 +51,6 @@ function App() {
       </header>
     </Grid>
   );
-}
+};
 
-export default App;
+export default Home;
