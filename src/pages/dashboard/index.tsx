@@ -1,19 +1,22 @@
-import { Grid } from "@mui/material";
-import React from "react";
-import Typography from "@mui/material/Typography";
-import DashboardContainer from "../../containers/dashboard";
-import {useStyles} from "./styles"
+import { Grid } from '@mui/material';
+import React from 'react';
+import Typography from '@mui/material/Typography';
+import DashboardContainer from '../../containers/dashboard';
+import { useStyles } from './styles';
+import { useTranslation } from 'react-i18next';
 
-function Home() {
-  const classes=useStyles()
+function Dashboard() {
+  const classes = useStyles();
+  const [translation] = useTranslation('translations');
+
   return (
     <Grid container spacing={3} className={classes.container}>
       <Grid item xs={12} className={classes.item}>
-        <Typography variant="h4">Dashboard</Typography>
+        <Typography variant='h4'>{translation('dashboard.title')}</Typography>
       </Grid>
-     <DashboardContainer/>
+      <DashboardContainer />
     </Grid>
   );
 }
 
-export default Home;
+export default Dashboard;

@@ -2,7 +2,7 @@ import { Grid } from '@mui/material';
 
 import { Counter } from '../features/counter/Counter';
 
-const Home: React.FC = () => {
+const Home = () => {
   return (
     <Grid container className='App'>
       <header className='App-header'>

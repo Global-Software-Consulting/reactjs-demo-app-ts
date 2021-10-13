@@ -7,6 +7,8 @@ import frenchTranslation from './translations/fr.json';
 import { ColorModeContext } from './utils/context';
 import { themes } from './utils/theme';
 import AppRouter from './routes';
+import { useAppSelector } from './app/hooks';
+import { selectLocale } from './redux/reducers/settings';
 
 i18next.init({
   interpolation: { escapeValue: false },
@@ -23,11 +25,11 @@ i18next.init({
 });
 
 const AppWrapper = () => {
-  // const language = useSelector(state => state.settings.language)
+  const language = useAppSelector(selectLocale);
 
-  // useEffect(() => {
-  //   i18next.changeLanguage(language);
-  // }, [language]);
+  useEffect(() => {
+    i18next.changeLanguage(language);
+  }, [language]);
 
   return (
     <I18nextProvider i18n={i18next}>
@@ -39,6 +41,7 @@ const AppWrapper = () => {
 function App() {
   const [theme, setTheme] = useState(themes[0]);
   const [mode, setMode] = React.useState('light');
+  console.log({ theme });
 
   const colorMode = React.useMemo(
     () => ({

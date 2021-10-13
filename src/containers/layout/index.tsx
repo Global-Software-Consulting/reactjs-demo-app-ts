@@ -2,10 +2,10 @@ import React from 'react';
 import Header from './header';
 
 interface LayoutProps {
-  children: any;
+  children: JSX.Element;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout = ({ children }: LayoutProps) => {
   return (
     <>
       <Header />

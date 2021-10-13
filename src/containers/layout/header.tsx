@@ -12,14 +12,16 @@ import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import { useTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
-// import LanguagePopover from '../../components/LanguagePopover';
-// import { changeLanguage } from '../../redux/actions/settings';
+import LanguagePopover from '../../components/menuPopover/languagePopover';
+import { useAppDispatch } from '../../app/hooks';
+import { changeLocale } from '../../redux/reducers/settings';
 import { ColorModeContext } from '../../utils/context';
 
 function Header() {
   const history = useHistory();
   const theme = useTheme();
-  const [translation, i18n] = useTranslation('translations');
+  const dispatch = useAppDispatch();
+  const [translation] = useTranslation('translations');
   const colorMode = React.useContext(ColorModeContext);
   const handleLogout = () => {
     localStorage.removeItem('token');
@@ -38,9 +40,10 @@ function Header() {
     setAnchorEl(null);
   };
 
-  //   const handleLanguageChange = (lang) => {
-  //     dispatch(changeLanguage(lang));
-  //   };
+  const handleLanguageChange = (lang: string) => {
+    console.log({ lang });
+    dispatch(changeLocale(lang));
+  };
 
   return (
     <Grid container>
@@ -74,7 +77,7 @@ function Header() {
           >
             <LogoutIcon />
           </IconButton>
-          {/* <LanguagePopover handleLanguageChange={handleLanguageChange}/> */}
+          <LanguagePopover handleLanguageChange={handleLanguageChange} />
 
           {auth && (
             <div>
