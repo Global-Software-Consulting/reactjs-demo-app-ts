@@ -1,10 +1,11 @@
 import { Grid } from '@mui/material';
 
 import { Counter } from '../features/counter/Counter';
-
-const Home = () => {
+import Profile from '../components/profile/index';
+const Home: React.FC = () => {
   return (
     <Grid container className='App'>
+      <Profile />
       <header className='App-header'>
         <Counter />
         <p>
