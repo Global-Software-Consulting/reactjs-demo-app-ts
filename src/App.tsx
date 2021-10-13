@@ -7,7 +7,7 @@ import frenchTranslation from './translations/fr.json';
 import { ColorModeContext } from './utils/context';
 import { themes } from './utils/theme';
 import AppRouter from './routes';
-import { useAppSelector } from './app/hooks';
+import { useAppSelector } from './hooks/reduxHooks';
 import { selectLocale } from './redux/reducers/settings';
 
 i18next.init({

@@ -3,7 +3,7 @@ import { Route, Redirect } from 'react-router-dom';
 
 const PublicRoutes = ({ component, ...rest }: any) => {
   const routeComponent = (props: any) =>
-    !localStorage.token ? (
+    !localStorage.authToken ? (
       React.createElement(component, props)
     ) : (
       <Redirect to={{ pathname: '/' }} />

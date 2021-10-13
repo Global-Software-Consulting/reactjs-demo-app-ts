@@ -13,7 +13,7 @@ import Brightness7Icon from '@mui/icons-material/Brightness7';
 import { useTheme } from '@mui/material/styles';
 import { useTranslation } from 'react-i18next';
 import LanguagePopover from '../../components/menuPopover/languagePopover';
-import { useAppDispatch } from '../../app/hooks';
+import { useAppDispatch } from '../../hooks/reduxHooks';
 import { changeLocale } from '../../redux/reducers/settings';
 import { ColorModeContext } from '../../utils/context';
 
@@ -24,7 +24,7 @@ function Header() {
   const [translation] = useTranslation('translations');
   const colorMode = React.useContext(ColorModeContext);
   const handleLogout = () => {
-    localStorage.removeItem('token');
+    localStorage.removeItem('authToken');
     history.push('/login');
   };
   const [auth] = React.useState(true);
