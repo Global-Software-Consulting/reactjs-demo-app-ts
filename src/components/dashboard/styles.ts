@@ -8,7 +8,6 @@ export const useStyles = makeStyles((theme:Theme) => ({
     boxShadow: "none",
     textAlign: "center",
     padding: "40px 0px",
-    color: theme.palette.primary.contrastText,
     backgroundColor: theme.palette.primary.light,
     borderRadius: "16px",
     marginBottom:"30px"
