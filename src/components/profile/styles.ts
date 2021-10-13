@@ -1,23 +1,32 @@
-import { makeStyles } from "@mui/styles";
-import { Theme } from "@mui/material";
+import { makeStyles } from '@mui/styles';
+import { Theme } from '@mui/material';
 
-export const useStyles = makeStyles((theme:Theme) => ({
-  roundedCircle:{
-borderRadius:"50%"
+export const useStyles = makeStyles((theme: Theme) => ({
+  root: {
+    height: '100vh',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  textCenter:{
-    textAlign:"center"
+  paper: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
-  card:{
-    color: "#fff",
-    width: "350px",
-    borderRadius: "10px",
-    background: "linear-gradient(145deg, #9a40a9, #b74cc9)",
-    boxShadow: "20px 20px 60px #913ca0, -20px -20px 60px #c552d8",
-    border: "none",
-    padding:"30px"
+  roundedCircle: {
+    borderRadius: '50%',
   },
-  socialButtons:{
-    marginTop:"40px"
-  }
+  textCenter: {
+    textAlign: 'center',
+  },
+  card: {
+    color: '#fff',
+    borderRadius: '10px',
+    background: `linear-gradient(145deg, ${theme.palette.primary.main} ,  ${theme.palette.primary.light})`,
+    boxShadow: `5px 5px 30px  ${theme.palette.primary.main}, -5px -5px 30px ${theme.palette.primary.light}`,
+    border: 'none',
+    padding: '30px',
+  },
+  socialButtons: {
+    marginTop: '40px',
+  },
 }));

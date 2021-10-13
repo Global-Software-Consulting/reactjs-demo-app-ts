@@ -14,6 +14,7 @@ import Dashboard from '../pages/dashboard';
 import Login from '../pages/login';
 import Signup from '../pages/signup';
 import NotFound from '../pages/page404';
+import Profile from '../pages/profile';
 
 function Routes() {
   return (
@@ -24,6 +25,7 @@ function Routes() {
           <PublicRoutes exact path='/login' component={Login} />
           <PublicRoutes exact path='/signup' component={Signup} />
           <ProtectedRoute exact path='/dashboard' component={Dashboard} />
+          <ProtectedRoute exact path='/profile' component={Profile} />
           <ProtectedRoute exact path='/counter' component={Home} />
           <ProtectedRoute exact path='/' component={Dashboard} />
           <Route exact path='/404' component={NotFound} />

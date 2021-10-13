@@ -48,6 +48,9 @@ export const themes = allThemes.map((mode: PaletteMode) => {
         Roboto: 'Roboto',
         Reef: 'Reef',
       },
+      colors: {
+        black: '#000',
+      },
       typography: {
         h1: { fontSize: '2em' },
         h2: { fontSize: '1.5em' },

@@ -1,6 +1,6 @@
 import { Grid, Typography } from '@mui/material';
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
@@ -16,10 +16,12 @@ import LanguagePopover from '../../components/menuPopover/languagePopover';
 import { useAppDispatch } from '../../hooks/reduxHooks';
 import { changeLocale } from '../../redux/reducers/settings';
 import { ColorModeContext } from '../../utils/context';
+import { useStyles } from './styles';
 
 function Header() {
   const history = useHistory();
   const theme = useTheme();
+  const classes = useStyles(theme);
   const dispatch = useAppDispatch();
   const [translation] = useTranslation('translations');
   const colorMode = React.useContext(ColorModeContext);
@@ -67,16 +69,7 @@ function Header() {
               <Brightness4Icon />
             )}
           </IconButton>
-          <IconButton
-            size='large'
-            aria-label='account of current user'
-            aria-controls='menu-appbar'
-            aria-haspopup='true'
-            onClick={handleLogout}
-            color='inherit'
-          >
-            <LogoutIcon />
-          </IconButton>
+
           <LanguagePopover handleLanguageChange={handleLanguageChange} />
 
           {auth && (
@@ -106,8 +99,12 @@ function Header() {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
+                <Link to='/profile' className={classes.menuItem}>
+                  <MenuItem>
+                    <Typography> Profile</Typography>
+                  </MenuItem>
+                </Link>
+                <MenuItem onClick={handleLogout}>Logout</MenuItem>
               </Menu>
             </div>
           )}
