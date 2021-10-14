@@ -1,15 +1,20 @@
 import React from 'react';
 import Typography from '@mui/material/Typography';
-import { Grid } from '@mui/material';
+import { Grid, IconButton } from '@mui/material';
 import { useStyles } from './styles';
 import Paper from '@mui/material/Paper';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import GoogleIcon from '@mui/icons-material/Google';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import './index.css';
 
 const Profile = () => {
   const classes = useStyles();
   return (
     <Grid container component={Paper} className={classes.root}>
-      <Grid item xs={12} sm={12} md={12} component='main'>
+      <Grid item xs={11} sm={12} md={12} component='main'>
         <Grid container justifyContent='center'>
           <Grid className={classes.card}>
             <Grid className={classes.textCenter}>
@@ -23,14 +28,18 @@ const Profile = () => {
               <Typography component='span'>Android Developer</Typography>
 
               <Grid container>
-                <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
+                <Grid item xs={4} sm={4} md={4} lg={4} xl={4}>
                   <Typography variant='h5'>Projects </Typography>
                   <Typography component='span'>10</Typography>
                 </Grid>
+                <Grid item xs={4} sm={4} md={4} lg={4} xl={4}>
+                  <Typography variant='h5'>Followers </Typography>
+                  <Typography component='span'>10,000</Typography>
+                </Grid>
 
-                <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
-                  <Typography variant='h5'>Projects </Typography>
-                  <Typography component='span'>10</Typography>
+                <Grid item xs={4} sm={4} md={4} lg={4} xl={4}>
+                  <Typography variant='h5'>Ranks </Typography>
+                  <Typography component='span'>123</Typography>
                 </Grid>
               </Grid>
               <hr className='line' />
@@ -38,6 +47,29 @@ const Profile = () => {
                 I am an android developer working at google Inc at california,
                 USA
               </Typography>
+
+              <Grid
+                container
+                justifyContent='center'
+                className={classes.socialButtons}
+              >
+                {' '}
+                <IconButton className={classes.socialIcon}>
+                  <FacebookIcon />
+                </IconButton>{' '}
+                <IconButton className={classes.socialIcon}>
+                  <LinkedInIcon />
+                </IconButton>{' '}
+                <IconButton className={classes.socialIcon}>
+                  <GoogleIcon />
+                </IconButton>{' '}
+                <IconButton className={classes.socialIcon}>
+                  <YouTubeIcon />
+                </IconButton>{' '}
+                <IconButton className={classes.socialIcon}>
+                  <TwitterIcon />
+                </IconButton>{' '}
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
