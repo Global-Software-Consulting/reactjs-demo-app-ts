@@ -3,7 +3,6 @@ import Typography from '@mui/material/Typography';
 import { Grid, IconButton } from '@mui/material';
 import { useStyles } from './styles';
 import Paper from '@mui/material/Paper';
-import YouTubeIcon from '@mui/icons-material/YouTube';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GoogleIcon from '@mui/icons-material/Google';
@@ -27,7 +26,7 @@ const Profile = () => {
               <Typography variant='h3'> Maria Smantha </Typography>
               <Typography component='span'>Android Developer</Typography>
 
-              <Grid container>
+              <Grid container className={classes.mt40}>
                 <Grid item xs={4} sm={4} md={4} lg={4} xl={4}>
                   <Typography variant='h5'>Projects </Typography>
                   <Typography component='span'>10</Typography>
@@ -48,11 +47,7 @@ const Profile = () => {
                 USA
               </Typography>
 
-              <Grid
-                container
-                justifyContent='center'
-                className={classes.socialButtons}
-              >
+              <Grid container justifyContent='center' className={classes.mt40}>
                 {' '}
                 <IconButton className={classes.socialIcon}>
                   <FacebookIcon />
@@ -62,9 +57,6 @@ const Profile = () => {
                 </IconButton>{' '}
                 <IconButton className={classes.socialIcon}>
                   <GoogleIcon />
-                </IconButton>{' '}
-                <IconButton className={classes.socialIcon}>
-                  <YouTubeIcon />
                 </IconButton>{' '}
                 <IconButton className={classes.socialIcon}>
                   <TwitterIcon />

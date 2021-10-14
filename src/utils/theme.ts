@@ -50,12 +50,10 @@ export const themes = allThemes.map((mode: PaletteMode) => {
           `,
         },
       },
-
       typography: {
         fontFamily: ['Reef', 'Roboto'].join(','),
       },
     },
-
     {
       fontFamily: {
         Roboto: 'Roboto',
@@ -71,7 +69,6 @@ export const themes = allThemes.map((mode: PaletteMode) => {
         h3: { fontSize: '1.3em' },
         h5: { fontSize: '0.8em' },
         h6: { fontSize: '0.7em' },
-        card: { color: mode !== 'light' ? '#fff' : '#005249' },
         button: {
           textTransform: 'none',
           background: mode === 'light' ? '#fff' : '#rgb(45,136,255)',

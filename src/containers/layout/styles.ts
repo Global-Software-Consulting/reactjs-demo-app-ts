@@ -7,4 +7,8 @@ export const useStyles = makeStyles((theme: Theme) => ({
     color:
       theme.palette.mode === 'light' ? theme.colors.black : theme.colors.white,
   },
+  title: {
+    textDecoration: 'none',
+    color: theme.colors.white,
+  },
 }));

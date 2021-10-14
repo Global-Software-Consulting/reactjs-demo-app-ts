@@ -50,9 +50,12 @@ function Header() {
     <Grid container>
       <AppBar position='static'>
         <Toolbar>
-          <Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>
-            {translation('nav.title')}
+          <Typography variant='h3' component='div' sx={{ flexGrow: 1 }}>
+            <Link to='/' className={classes.title}>
+              {translation('nav.title')}
+            </Link>
           </Typography>
+
           <Typography sx={{ textTransform: 'capitalize' }}>
             {theme.palette.mode} {translation('nav.mode')}
           </Typography>
@@ -98,7 +101,11 @@ function Header() {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                <Link to='/profile' className={classes.menuItem}>
+                <Link
+                  to='/profile'
+                  className={classes.menuItem}
+                  onClick={handleClose}
+                >
                   <MenuItem>
                     <Typography> Profile</Typography>
                   </MenuItem>

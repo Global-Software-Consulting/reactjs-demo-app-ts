@@ -3,7 +3,7 @@ import { Theme } from '@mui/material';
 
 export const useStyles = makeStyles((theme: Theme) => ({
   root: {
-    height: '90vh',
+    height: '91vh',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -26,10 +26,9 @@ export const useStyles = makeStyles((theme: Theme) => ({
     border: 'none',
     padding: '30px',
   },
-  socialButtons: {
+  mt40: {
     marginTop: '40px',
   },
-
   socialIcon: {
     width: '40px',
     height: '40px',
