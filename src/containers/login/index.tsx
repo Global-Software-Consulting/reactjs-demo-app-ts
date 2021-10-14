@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
-import Login from '../../components/login';
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
+import Login from "../../components/login";
 
 export interface LoginCredentials {
   email: string;
@@ -14,11 +14,11 @@ const LoginContainer = () => {
     console.log(data);
     setLoading(true);
     localStorage.setItem(
-      'authToken',
-      'ejma01290lalk109019njshaaajjaiaj109109y'
+      "authToken",
+      "ejma01290lalk109019njshaaajjaiaj109109y"
     );
     setLoading(false);
-    history.push('/');
+    history.push("/");
   };
 
   return <Login onSubmit={onSubmit} loading={loading} />;

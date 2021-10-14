@@ -1,12 +1,12 @@
-import React from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import React from "react";
+import { Route, Redirect } from "react-router-dom";
 
-const PublicRoutes = ({ component, ...rest }: any) => {
+const PublicRoutes = ({ component, ...rest }: any): JSX.Element => {
   const routeComponent = (props: any) =>
     !localStorage.authToken ? (
       React.createElement(component, props)
     ) : (
-      <Redirect to={{ pathname: '/' }} />
+      <Redirect to={{ pathname: "/" }} />
     );
   return <Route {...rest} render={routeComponent} />;
 };

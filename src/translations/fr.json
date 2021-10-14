@@ -1,17 +1,17 @@
 {
-    "nav":{
-        "title":"Demo App",
-        "mode":"mode"
-    },
-    "dashboard":{
-        "title":"Tableau de bord",
-        "sales":"Ventes hebdomadaires",
-        "products":"Des produits",     
-        "income":"Le revenu" ,  
-        "users":"Utilisatrices" ,
-        "chart":{
-            "title":"Taux de conversion",
-            "description":"(+43%) que l'an dernier"
-        }     
+  "nav": {
+    "title": "Demo App",
+    "mode": "mode"
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "sales": "Ventes hebdomadaires",
+    "products": "Des produits",
+    "income": "Le revenu",
+    "users": "Utilisatrices",
+    "chart": {
+      "title": "Taux de conversion",
+      "description": "(+43%) que l'an dernier"
     }
+  }
 }

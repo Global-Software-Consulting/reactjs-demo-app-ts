@@ -1,15 +1,15 @@
-import { useRef, useState } from 'react';
-import { alpha } from '@mui/material/styles';
+import React, { useRef, useState } from "react";
+import { alpha } from "@mui/material/styles";
 import {
   Box,
   MenuItem,
   ListItemIcon,
   ListItemText,
   IconButton,
-} from '@mui/material';
-import MenuPopover from './index';
-import en from '../../assets/icons/ic_flag_en.svg';
-import fr from '../../assets/icons/ic_flag_fr.svg';
+} from "@mui/material";
+import MenuPopover from "./index";
+import en from "../../assets/icons/ic_flag_en.svg";
+import fr from "../../assets/icons/ic_flag_fr.svg";
 
 interface LanguagePopoverProps {
   handleLanguageChange: (lang: string) => any;
@@ -22,13 +22,13 @@ interface LanguageProps {
 
 const LANGS = [
   {
-    value: 'en',
-    label: 'English',
+    value: "en",
+    label: "English",
     icon: en,
   },
   {
-    value: 'fr',
-    label: 'French',
+    value: "fr",
+    label: "French",
     icon: fr,
   },
 ];
@@ -89,9 +89,9 @@ const LanguagePopover = ({ handleLanguageChange }: LanguagePopoverProps) => {
                 sx={{ py: 1, px: 2.5 }}
               >
                 <ListItemIcon>
-                  <Box component='img' alt={option.label} src={option.icon} />
+                  <Box component="img" alt={option.label} src={option.icon} />
                 </ListItemIcon>
-                <ListItemText primaryTypographyProps={{ variant: 'body2' }}>
+                <ListItemText primaryTypographyProps={{ variant: "body2" }}>
                   {option.label}
                 </ListItemText>
               </MenuItem>

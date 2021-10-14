@@ -1,19 +1,19 @@
-import React from 'react';
-import { Grid } from '@mui/material';
-import { useTranslation } from 'react-i18next';
-import Card from '../../components/dashboard/card';
-import Chart from '../../components/dashboard/chart';
-import { useStyles } from './styles';
+import React from "react";
+import { Grid } from "@mui/material";
+import { useTranslation } from "react-i18next";
+import Card from "../../components/dashboard/card";
+import Chart from "../../components/dashboard/chart";
+import { useStyles } from "./styles";
 
 function DashboardContainer() {
   const classes = useStyles();
-  const [translation] = useTranslation('translations');
+  const [translation] = useTranslation("translations");
 
   const data = [
-    { title: translation('dashboard.users'), count: 2340 },
-    { title: translation('dashboard.sales'), count: 2340 },
-    { title: translation('dashboard.products'), count: 23 },
-    { title: translation('dashboard.income'), count: '$4500' },
+    { title: translation("dashboard.users"), count: 2340 },
+    { title: translation("dashboard.sales"), count: 2340 },
+    { title: translation("dashboard.products"), count: 23 },
+    { title: translation("dashboard.income"), count: "$4500" },
   ];
   return (
     <>

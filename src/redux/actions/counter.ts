@@ -1,6 +1,6 @@
 // A mock function to mimic making an async request for data
-import { AppDispatch } from '../store';
-import { incrementByAmount } from '../reducers/counter';
+import { AppDispatch } from "../store";
+import { incrementByAmount } from "../reducers/counter";
 
 export function fetchCount(amount = 1) {
   return new Promise<{ data: number }>((resolve) =>

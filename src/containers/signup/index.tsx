@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
-import Signup from '../../components/signup';
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
+import Signup from "../../components/signup";
 
 export interface SignupCredentials {
   email: string;
@@ -16,11 +16,11 @@ export default function SignupContainer() {
     console.log(data);
     setLoading(true);
     localStorage.setItem(
-      'authToken',
-      'ejma01290lalk109019njshaaajjaiaj109109y'
+      "authToken",
+      "ejma01290lalk109019njshaaajjaiaj109109y"
     );
     setLoading(false);
-    history.push('/');
+    history.push("/");
   };
 
   return <Signup onSubmit={onSubmit} loading={loading} />;

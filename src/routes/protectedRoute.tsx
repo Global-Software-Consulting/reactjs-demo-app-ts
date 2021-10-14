@@ -1,12 +1,12 @@
-import React from 'react';
-import { Route, Redirect } from 'react-router-dom';
-import Layout from '../containers/layout';
+import React from "react";
+import { Route, Redirect } from "react-router-dom";
+import Layout from "../containers/layout";
 const ProtectedRoute = ({ component, ...rest }: any) => {
   const routeComponent = (props: any) =>
     localStorage.authToken ? (
       <Layout>{React.createElement(component, props)}</Layout>
     ) : (
-      <Redirect to={{ pathname: '/login' }} />
+      <Redirect to={{ pathname: "/login" }} />
     );
   return <Route {...rest} render={routeComponent} />;
 };
