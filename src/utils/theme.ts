@@ -3,6 +3,19 @@ import { createTheme } from '@mui/material/styles';
 import Reef from '../assets/fonts/reef/Reef.otf';
 import Roboto from '../assets/fonts/roboto/Roboto-Regular.ttf';
 
+declare module '@mui/material/styles' {
+  interface Theme {
+    colors: {
+      black: string;
+      white: string;
+    };
+    fontFamily: {
+      Roboto: string;
+      Reef: string;
+    };
+  }
+}
+
 let allThemes: Array<PaletteMode> = ['light', 'dark'];
 export const themes = allThemes.map((mode: PaletteMode) => {
   return createTheme(
@@ -50,6 +63,7 @@ export const themes = allThemes.map((mode: PaletteMode) => {
       },
       colors: {
         black: '#000',
+        white: '#fff',
       },
       typography: {
         h1: { fontSize: '2em' },
