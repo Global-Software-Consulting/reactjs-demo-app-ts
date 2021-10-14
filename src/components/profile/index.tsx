@@ -15,6 +15,7 @@ const Profile = () => {
             <Grid className={classes.textCenter}>
               <img
                 src='https://i.imgur.com/stD0Q19.jpg'
+                alt='profile.jpg'
                 width='100'
                 className={classes.roundedCircle}
               />
