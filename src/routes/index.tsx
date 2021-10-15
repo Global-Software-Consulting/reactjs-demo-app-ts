@@ -16,7 +16,13 @@ import Signup from "../pages/signup";
 import NotFound from "../pages/page404";
 import Profile from "../pages/profile";
 
-function Routes() {
+export interface RouteProps {
+  component: React.FC<any>;
+  exact: boolean;
+  path: string;
+}
+
+const Routes = (): JSX.Element => {
   return (
     <Router>
       <Grid container>
@@ -34,6 +40,6 @@ function Routes() {
       </Grid>
     </Router>
   );
-}
+};
 
 export default Routes;

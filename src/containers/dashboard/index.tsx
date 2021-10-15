@@ -5,7 +5,7 @@ import Card from "../../components/dashboard/card";
 import Chart from "../../components/dashboard/chart";
 import { useStyles } from "./styles";
 
-function DashboardContainer() {
+const DashboardContainer = (): JSX.Element => {
   const classes = useStyles();
   const [translation] = useTranslation("translations");
 
@@ -36,6 +36,6 @@ function DashboardContainer() {
       })}
     </>
   );
-}
+};
 
 export default DashboardContainer;

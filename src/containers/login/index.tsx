@@ -6,7 +6,7 @@ export interface LoginCredentials {
   email: string;
   password: string;
 }
-const LoginContainer = () => {
+const LoginContainer = (): JSX.Element => {
   const history = useHistory();
   const [loading, setLoading] = useState<boolean>(false);
 

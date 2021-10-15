@@ -9,7 +9,7 @@ import GoogleIcon from "@mui/icons-material/Google";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import "./index.css";
 
-const Profile = () => {
+const Profile = (): JSX.Element => {
   const classes = useStyles();
   return (
     <Grid container component={Paper} className={classes.root}>

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useStyles } from "./styles";
 
-const NotFound = () => {
+const NotFound = (): JSX.Element => {
   const classes = useStyles();
   const [translate] = useTranslation("translations");
   return (

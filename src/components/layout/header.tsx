@@ -17,7 +17,7 @@ import { changeLocale } from "../../redux/reducers/settings";
 import { ColorModeContext } from "../../utils/context";
 import { useStyles } from "./styles";
 
-function Header() {
+const Header = (): JSX.Element => {
   const history = useHistory();
   const theme = useTheme();
   const classes = useStyles(theme);
@@ -42,7 +42,6 @@ function Header() {
   };
 
   const handleLanguageChange = (lang: string) => {
-    console.log({ lang });
     dispatch(changeLocale(lang));
   };
 
@@ -118,6 +117,6 @@ function Header() {
       </AppBar>
     </Grid>
   );
-}
+};
 
 export default Header;

@@ -22,6 +22,7 @@ export const settingsSlice = createSlice({
 
 export const { changeLocale } = settingsSlice.actions;
 
-export const selectLocale = (state: RootState) => state.settings.language;
+export const selectLocale = (state: RootState): string =>
+  state.settings.language;
 
 export default settingsSlice.reducer;

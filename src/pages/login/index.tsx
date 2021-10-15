@@ -1,7 +1,7 @@
-import * as React from "react";
+import React from "react";
 import LoginContainer from "../../containers/login";
 
-const Login = () => {
+const Login = (): JSX.Element => {
   return <LoginContainer />;
 };
 

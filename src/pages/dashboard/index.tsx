@@ -5,7 +5,7 @@ import DashboardContainer from "../../containers/dashboard";
 import { useStyles } from "./styles";
 import { useTranslation } from "react-i18next";
 
-function Dashboard() {
+const Dashboard = (): JSX.Element => {
   const classes = useStyles();
   const [translation] = useTranslation("translations");
 
@@ -17,6 +17,6 @@ function Dashboard() {
       <DashboardContainer />
     </Grid>
   );
-}
+};
 
 export default Dashboard;

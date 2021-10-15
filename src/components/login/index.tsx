@@ -16,7 +16,7 @@ interface LoginProps {
   onSubmit: (data: LoginCredentials) => any;
 }
 
-const LogIn = ({ loading, onSubmit }: LoginProps) => {
+const LogIn = ({ loading, onSubmit }: LoginProps): JSX.Element => {
   const classes = useStyles();
   const {
     handleSubmit,

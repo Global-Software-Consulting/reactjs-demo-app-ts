@@ -19,7 +19,7 @@ const series = [
     data: [30, 40, 45, 50, 49, 60, 70, 91],
   },
 ];
-export default function BarChart() {
+const BarChart = (): JSX.Element => {
   const [translation] = useTranslation("translations");
 
   return (
@@ -33,4 +33,5 @@ export default function BarChart() {
       </Box>
     </Card>
   );
-}
+};
+export default BarChart;

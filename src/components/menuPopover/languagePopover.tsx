@@ -32,7 +32,9 @@ const LANGS = [
     icon: fr,
   },
 ];
-const LanguagePopover = ({ handleLanguageChange }: LanguagePopoverProps) => {
+const LanguagePopover = ({
+  handleLanguageChange,
+}: LanguagePopoverProps): JSX.Element => {
   const anchorRef = useRef(null);
   const [open, setOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState<LanguageProps>(

@@ -15,7 +15,7 @@ interface SignupProps {
   loading: boolean;
   onSubmit: (data: SignupCredentials) => any;
 }
-const Signup = ({ loading, onSubmit }: SignupProps) => {
+const Signup = ({ loading, onSubmit }: SignupProps): JSX.Element => {
   const classes = useStyles();
   const {
     handleSubmit,

@@ -11,7 +11,7 @@ interface Data {
   };
 }
 
-const StatsCard = ({ data }: Data) => {
+const StatsCard = ({ data }: Data): JSX.Element => {
   const classes = useStyles();
   return (
     <Card className={classes.card}>

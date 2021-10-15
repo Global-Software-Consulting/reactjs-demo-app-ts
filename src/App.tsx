@@ -24,7 +24,7 @@ i18next.init({
   },
 });
 
-const AppWrapper = () => {
+const AppWrapper = (): JSX.Element => {
   const language = useAppSelector(selectLocale);
 
   useEffect(() => {
@@ -38,10 +38,9 @@ const AppWrapper = () => {
   );
 };
 
-function App() {
+const App = (): JSX.Element => {
   const [theme, setTheme] = useState(themes[0]);
   const [mode, setMode] = React.useState("light");
-  console.log({ theme });
 
   const colorMode = React.useMemo(
     () => ({
@@ -62,6 +61,6 @@ function App() {
       </ThemeProvider>
     </ColorModeContext.Provider>
   );
-}
+};
 
 export default App;

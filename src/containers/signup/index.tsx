@@ -8,7 +8,7 @@ export interface SignupCredentials {
   firstName: string;
   lastName: string;
 }
-export default function SignupContainer() {
+const SignupContainer = (): JSX.Element => {
   const history = useHistory();
   const [loading, setLoading] = useState(false);
 
@@ -24,4 +24,5 @@ export default function SignupContainer() {
   };
 
   return <Signup onSubmit={onSubmit} loading={loading} />;
-}
+};
+export default SignupContainer;

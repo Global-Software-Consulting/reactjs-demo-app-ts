@@ -1,11 +1,11 @@
 import React from "react";
-import Header from "./header";
+import Header from "../../components/layout/header";
 
 interface LayoutProps {
   children: JSX.Element;
 }
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ children }: LayoutProps): JSX.Element => {
   return (
     <>
       <Header />

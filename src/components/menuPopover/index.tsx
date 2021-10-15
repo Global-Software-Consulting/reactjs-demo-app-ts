@@ -23,7 +23,7 @@ const ArrowStyle = styled("span")(({ theme }) => ({
   },
 }));
 
-const MenuPopover = ({ children, open, ...other }: MenuProps) => {
+const MenuPopover = ({ children, open, ...other }: MenuProps): JSX.Element => {
   return (
     <Popover
       open={open}

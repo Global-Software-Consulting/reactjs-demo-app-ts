@@ -1,7 +1,8 @@
 import React from "react";
 import SignupContainer from "../../containers/signup";
-function Signup() {
+
+const Signup = (): JSX.Element => {
   return <SignupContainer />;
-}
+};
 
 export default Signup;
