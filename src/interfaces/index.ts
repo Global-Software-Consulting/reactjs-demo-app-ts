@@ -9,3 +9,10 @@ export interface UserProps {
   lastName: string;
   id: number;
 }
+
+export interface SignupCredProps {
+  email: string;
+  password: string;
+  firstName: string;
+  lastName: string;
+}

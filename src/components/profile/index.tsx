@@ -7,9 +7,14 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import GoogleIcon from "@mui/icons-material/Google";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { UserProps } from "../../interfaces";
 import "./index.css";
 
-const Profile = (): JSX.Element => {
+interface ProfileProps {
+  user: UserProps | null;
+}
+
+const Profile = ({ user }: ProfileProps): JSX.Element => {
   const classes = useStyles();
   return (
     <Grid container component={Paper} className={classes.root}>
@@ -23,7 +28,9 @@ const Profile = (): JSX.Element => {
                 width="100"
                 className={classes.roundedCircle}
               />
-              <Typography variant="h3"> Maria Smantha </Typography>
+              <Typography variant="h3">
+                {user?.firstName} {user?.lastName}
+              </Typography>
               <Typography component="span">Android Developer</Typography>
 
               <Grid container className={classes.mt40}>

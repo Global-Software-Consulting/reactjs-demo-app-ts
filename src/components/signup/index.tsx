@@ -9,11 +9,11 @@ import { CircularProgress } from "@mui/material";
 import { useForm, Controller } from "react-hook-form";
 import { emailRegEx } from "../../utils/constants";
 import { useStyles } from "./styles";
-import { SignupCredentials } from "../../containers/signup";
+import { SignupCredProps } from "../../interfaces";
 
 interface SignupProps {
   loading: boolean;
-  onSubmit: (data: SignupCredentials) => any;
+  onSubmit: (data: SignupCredProps) => any;
 }
 const Signup = ({ loading, onSubmit }: SignupProps): JSX.Element => {
   const classes = useStyles();

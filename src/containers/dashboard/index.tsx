@@ -4,15 +4,10 @@ import { useTranslation } from "react-i18next";
 import Card from "../../components/dashboard/card";
 import Chart from "../../components/dashboard/chart";
 import { useStyles } from "./styles";
-import { useAppSelector } from "../../hooks/reduxHooks";
-import { selectUser } from "../../redux/reducers/auth";
 
 const DashboardContainer = (): JSX.Element => {
   const classes = useStyles();
-  const user = useAppSelector(selectUser);
   const [translation] = useTranslation("translations");
-
-  console.log({ user });
 
   const data = [
     { title: translation("dashboard.users"), count: 2340 },

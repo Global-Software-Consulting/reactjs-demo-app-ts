@@ -6,6 +6,20 @@
       "password": "sana@123",
       "lastName": "ilyas",
       "id": 1
+    },
+    {
+      "firstName": "sana",
+      "lastName": "ilyas",
+      "email": "sana1263@gmail.com",
+      "password": "01-0-10-1",
+      "id": 2
+    },
+    {
+      "firstName": "sana",
+      "lastName": "ilyas",
+      "email": "sana123@gmail.com",
+      "password": "12345",
+      "id": 3
     }
   ]
 }

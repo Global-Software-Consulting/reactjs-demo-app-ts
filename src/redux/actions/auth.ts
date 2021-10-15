@@ -1,6 +1,6 @@
 import { AppDispatch } from "../store";
 import API from "../../utils/axiosConfig";
-import { LoginCredProps, UserProps } from "../../interfaces";
+import { LoginCredProps, UserProps, SignupCredProps } from "../../interfaces";
 import { loginSuccess } from "../reducers/auth";
 
 export const login =
@@ -11,18 +11,29 @@ export const login =
       users = users.filter(
         (item) => item.email === data.email && item.password === data.password
       );
-      console.log(users);
-      if (users.length > 0) {
-        console.log({ user: users[0] });
 
+      if (users.length > 0) {
         dispatch(loginSuccess(users[0]));
-        return { success: "true", data: users[0] };
+        return { success: true, data: users[0] };
+      }
+      return { success: false, data: null };
+    } catch (error) {
+      return { success: false, data: null };
+    }
+  };
+export const signup =
+  (data: SignupCredProps) => async (dispatch: AppDispatch) => {
+    try {
+      const response = await API.post("/auth", data);
+      const user: UserProps = response.data as UserProps;
+
+      if (user) {
+        dispatch(loginSuccess(user));
+        return { success: true, data: user };
       }
 
-      console.log({ response, data: response.data });
-      return { success: "false", data: null };
+      return { success: false, data: null };
     } catch (error) {
-      console.log({ error });
-      return { success: "false", data: null };
+      return { success: false, data: null };
     }
   };
