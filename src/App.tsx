@@ -9,6 +9,7 @@ import { themes } from "./utils/theme";
 import AppRouter from "./routes";
 import { useAppSelector } from "./hooks/reduxHooks";
 import { selectLocale } from "./redux/reducers/settings";
+import { HelmetProvider } from "react-helmet-async";
 
 i18next.init({
   interpolation: { escapeValue: false },
@@ -57,7 +58,9 @@ const App = (): JSX.Element => {
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
-        <AppWrapper />
+        <HelmetProvider>
+          <AppWrapper />
+        </HelmetProvider>
       </ThemeProvider>
     </ColorModeContext.Provider>
   );

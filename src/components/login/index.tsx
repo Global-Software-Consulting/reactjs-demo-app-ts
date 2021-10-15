@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-import Link from "@mui/material/Link";
+import { Link } from "react-router-dom";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
@@ -9,20 +9,27 @@ import { CircularProgress } from "@mui/material";
 import { useForm, Controller } from "react-hook-form";
 import { emailRegEx } from "../../utils/constants";
 import { useStyles } from "./styles";
-import { LoginCredentials } from "../../containers/login/index";
+import { LoginCredProps } from "../../interfaces";
 
 interface LoginProps {
   loading: boolean;
-  onSubmit: (data: LoginCredentials) => any;
+  onSubmit: (data: LoginCredProps) => any;
 }
 
 const LogIn = ({ loading, onSubmit }: LoginProps): JSX.Element => {
   const classes = useStyles();
+  const _isMounted = useRef(true); // Initial value _isMounted = true
+
   const {
     handleSubmit,
     control,
     formState: { errors },
   } = useForm();
+  useEffect(() => {
+    return () => {
+      _isMounted.current = false;
+    };
+  }, []);
 
   return (
     <Grid container component={Paper} className={classes.root}>
@@ -74,7 +81,13 @@ const LogIn = ({ loading, onSubmit }: LoginProps): JSX.Element => {
               )}
             />
 
-            <Button type="submit" fullWidth variant="contained" color="primary">
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="primary"
+              disabled={loading}
+            >
               {loading ? (
                 <CircularProgress
                   style={{ color: "#fff", height: "20px", width: "20px" }}
@@ -85,9 +98,7 @@ const LogIn = ({ loading, onSubmit }: LoginProps): JSX.Element => {
             </Button>
             <Grid container>
               <Grid item>
-                <Link href="/signup" variant="body2">
-                  Don&apos;t have an account? Sign Up
-                </Link>
+                <Link to="/signup">Don&apos;t have an account? Sign Up</Link>
               </Grid>
             </Grid>
           </form>

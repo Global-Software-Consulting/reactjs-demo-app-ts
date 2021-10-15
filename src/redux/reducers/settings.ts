@@ -1,11 +1,11 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../store";
 
-export interface CounterState {
+export interface SettingsState {
   language: string;
 }
 
-const initialState: CounterState = {
+const initialState: SettingsState = {
   language: "en",
 };
 

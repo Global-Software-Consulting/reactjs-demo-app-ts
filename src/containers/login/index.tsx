@@ -1,24 +1,23 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import Login from "../../components/login";
+import { useAppDispatch } from "../../hooks/reduxHooks";
+import { login } from "../../redux/actions/auth";
+import { LoginCredProps } from "../../interfaces";
 
-export interface LoginCredentials {
-  email: string;
-  password: string;
-}
 const LoginContainer = (): JSX.Element => {
   const history = useHistory();
+  const dispatch = useAppDispatch();
   const [loading, setLoading] = useState<boolean>(false);
 
-  const onSubmit = (data: LoginCredentials) => {
-    console.log(data);
+  const onSubmit = async (data: LoginCredProps) => {
     setLoading(true);
-    localStorage.setItem(
-      "authToken",
-      "ejma01290lalk109019njshaaajjaiaj109109y"
-    );
-    setLoading(false);
-    history.push("/");
+    const response = await dispatch(login(data));
+    if (response.success) {
+      history.push("/");
+    } else {
+      setLoading(false);
+    }
   };
 
   return <Login onSubmit={onSubmit} loading={loading} />;
