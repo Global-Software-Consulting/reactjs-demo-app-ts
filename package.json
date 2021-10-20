@@ -40,6 +40,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "db:serve": "json-server --watch server/db.json --port 8000",
+    "dev": "concurrently \"npm start\" \"npm run db:serve\"",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
   },
   "eslintConfig": {
@@ -62,6 +63,7 @@
     "@types/react-router-dom": "^5.3.1",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
+    "concurrently": "^6.3.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",

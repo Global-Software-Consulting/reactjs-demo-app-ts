@@ -1,44 +1,89 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+![React](src/assets/img/logo.png)
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+We have created a demo app of [React](https://reactjs.org/) that demonstrates implementation of Material UI, Redux toolkit and Routing with react using typescript.
 
-### `yarn start`
+### Technologies and Libraries:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [React](https://reactjs.org/)+ [Typescript](https://react-typescript-cheatsheet.netlify.app/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [Material UI](https://mui.com/)
+- [Axios](https://axios-http.com/)
+- [i18next](https://www.i18next.com/)
+- [React Router DOM](https://reactrouter.com/web/guides/quick-start)
+- [ESLint](https://eslint.org/docs/user-guide/getting-started)
+- [Prettier](https://prettier.io/)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Prerequisites
 
-### `yarn test`
+- [Node.js](https://nodejs.org/) (>= 14.14.36)
+- [npm](https://www.npmjs.com/) (>= 6.5.0)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Key Feature
 
-### `yarn build`
+- Login
+- Signup
+- Dashboard
+- Profile
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Code Structure
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+we tried to implement the best practice of code structure in our project following are the example
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### all code go in src folder
 
-### `yarn eject`
+- src/components/\_ /\*.tsx
+- src/containers/\_ /\*.tsx
+- src/pages/\_ /\*.tsx
+- src/hooks/\*.ts
+- src/routes/\*.tsx
+- src/utils/\*.ts
+- src/redux/actions/\*.ts
+- src/redux/reducers/\*.ts
+- src/redux/store.ts
+- src/redux/types.ts
+- src/assets/fonts
+- src/assets/icons
+- src/translations/\*.json
+- server/db.json
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Environment Variables
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The environment variables can be found and modified in the `.env` file. They come with these default values:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+| env                | DummyData |
+| ------------------ | --------- |
+| REACT_APP_BASE_URL | base_url  |
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## How to Setup
+
+#### Step 1: git clone this repo.
+
+#### Step 2: cd to the cloned repo.
+
+#### Step 3: Install the node modules required for the project with `npm i` or `yarn install`
+
+#### Step 4: Make sure you add the requires env in .env file check .env.example for help
+
+#### Step 5: Start the app in development mode with `npm run dev` it will run the react application on http://localhost:3000/ and local JSON server on http://localhost:8000/ by default.
+
+## Installation
+
+```bash
+$ npm i
+```
+
+## Running the app
+
+```bash
+# development
+$ npm run dev
+
+# build
+$ npm run build
+```
 
 ## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).

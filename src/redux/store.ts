@@ -1,8 +1,5 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
-
 import { combineReducers } from "redux";
-
-import counterReducer from "./reducers/counter";
 import settingReducer from "./reducers/settings";
 import authReducer from "./reducers/auth";
 import {
@@ -24,7 +21,6 @@ const persistConfig = {
 };
 
 const rootReducer = combineReducers({
-  counter: counterReducer,
   settings: settingReducer,
   auth: authReducer,
 });
