@@ -22,10 +22,13 @@ We have created a demo app of [React](https://reactjs.org/) that demonstrates im
 
 ## Key Feature
 
-- Login
-- Signup
-- Dashboard
-- Profile
+- Login & Signup using JSON server
+- Localization
+- Light & Dark Theme setup
+- Redux Toolkit setup
+- Authenticated Routing
+- Custom Hooks
+- ESLint
 
 ## Code Structure
 
