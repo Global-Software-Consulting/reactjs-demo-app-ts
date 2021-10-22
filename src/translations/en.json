@@ -1,7 +1,10 @@
 {
   "nav": {
     "title": "Demo App",
-    "mode": "mode"
+    "mode": "mode",
+    "dropdown": {
+      "profile": "Profile"
+    }
   },
   "dashboard": {
     "title": "Dashboard",
@@ -17,5 +20,42 @@
   "notFound": {
     "title": "Page Not Found",
     "linkText": "Go to Home"
-  }
+  },
+
+  "login": {
+    "title": "Sign In",
+    "email": {
+      "label": "Email Address",
+      "message": "Enter Valid Email"
+    },
+
+    "password": {
+      "label": "Password",
+      "message": "Password is required"
+    },
+    "submit": "Sign In",
+    "linkText": "Don't have an account? Sign Up"
+  },
+  "signup": {
+    "title": "Sign Up",
+    "fName": {
+      "label": "First Name",
+      "message": "First Name is required"
+    },
+    "lName": {
+      "label": "Last Name",
+      "message": "Last Name is required"
+    },
+    "email": {
+      "label": "Email Address",
+      "message": "Enter Valid Email"
+    },
+    "password": {
+      "label": "Password",
+      "message": "Password is required"
+    },
+    "submit": "Sign Up",
+    "linkText": "Already have an account? Login"
+  },
+  "logout": "Logout"
 }

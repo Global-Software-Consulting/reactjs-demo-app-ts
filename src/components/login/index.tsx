@@ -6,6 +6,7 @@ import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { CircularProgress } from "@mui/material";
+import { useTranslation } from "react-i18next";
 import { useForm, Controller } from "react-hook-form";
 import { emailRegEx } from "../../utils/constants";
 import { useStyles } from "./styles";
@@ -18,7 +19,8 @@ interface LoginProps {
 
 const LogIn = ({ loading, onSubmit }: LoginProps): JSX.Element => {
   const classes = useStyles();
-  const _isMounted = useRef(true); // Initial value _isMounted = true
+  const [translation] = useTranslation("translations");
+  const _isMounted = useRef(true);
 
   const {
     handleSubmit,
@@ -36,7 +38,7 @@ const LogIn = ({ loading, onSubmit }: LoginProps): JSX.Element => {
       <Grid item xs={12} sm={8} md={5} component="main">
         <div className={classes.paper}>
           <Typography component="h1" variant="h1">
-            Sign in
+            {translation("login.title")}
           </Typography>
           <form
             className={classes.form}
@@ -55,9 +57,11 @@ const LogIn = ({ loading, onSubmit }: LoginProps): JSX.Element => {
                   margin="normal"
                   fullWidth
                   id="email"
-                  label="Email Address"
+                  label={translation("login.email.label")}
                   error={Boolean(errors?.email)}
-                  helperText={errors?.email && "Enter Valid Email"}
+                  helperText={
+                    errors?.email && translation("login.email.message")
+                  }
                 />
               )}
             />
@@ -73,10 +77,12 @@ const LogIn = ({ loading, onSubmit }: LoginProps): JSX.Element => {
                   margin="normal"
                   fullWidth
                   name="password"
-                  label="Password"
+                  label={translation("login.password.label")}
                   type="password"
                   error={Boolean(errors?.password)}
-                  helperText={errors?.password && "Password is required"}
+                  helperText={
+                    errors?.password && translation("login.password.message")
+                  }
                 />
               )}
             />
@@ -93,12 +99,12 @@ const LogIn = ({ loading, onSubmit }: LoginProps): JSX.Element => {
                   style={{ color: "#fff", height: "20px", width: "20px" }}
                 />
               ) : (
-                "Sign In"
+                translation("login.submit")
               )}
             </Button>
             <Grid container>
               <Grid item>
-                <Link to="/signup">Don&apos;t have an account? Sign Up</Link>
+                <Link to="/signup"> {translation("login.linkText")}</Link>
               </Grid>
             </Grid>
           </form>

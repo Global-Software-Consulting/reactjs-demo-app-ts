@@ -106,10 +106,15 @@ const Header = (): JSX.Element => {
                   onClick={handleClose}
                 >
                   <MenuItem>
-                    <Typography> Profile</Typography>
+                    <Typography>
+                      {translation("nav.dropdown.profile")}
+                    </Typography>
                   </MenuItem>
                 </Link>
-                <MenuItem onClick={handleLogout}>Logout</MenuItem>
+                <MenuItem onClick={handleLogout}>
+                  {" "}
+                  {translation("logout")}
+                </MenuItem>
               </Menu>
             </div>
           )}

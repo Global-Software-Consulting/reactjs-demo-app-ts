@@ -1,25 +1,11 @@
 {
   "auth": [
     {
-      "firstName": "sana",
-      "email": "sana@gmail.com",
-      "password": "sana@123",
-      "lastName": "ilyas",
+      "firstName": "Sana",
+      "email": "test@gmail.com",
+      "password": "testing@123",
+      "lastName": "Ilyas",
       "id": 1
-    },
-    {
-      "firstName": "sana",
-      "lastName": "ilyas",
-      "email": "sana1263@gmail.com",
-      "password": "01-0-10-1",
-      "id": 2
-    },
-    {
-      "firstName": "sana",
-      "lastName": "ilyas",
-      "email": "sana123@gmail.com",
-      "password": "12345",
-      "id": 3
     }
   ]
 }
