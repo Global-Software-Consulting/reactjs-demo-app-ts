@@ -9,6 +9,7 @@ We have created a demo app of [React](https://reactjs.org/) that demonstrates im
 - [React](https://reactjs.org/)+ [Typescript](https://react-typescript-cheatsheet.netlify.app/)
 - [Redux Toolkit](https://redux-toolkit.js.org/)
 - [Material UI](https://mui.com/)
+- [React Hook Form](https://react-hook-form.com/)
 - [Axios](https://axios-http.com/)
 - [i18next](https://www.i18next.com/)
 - [React Router DOM](https://reactrouter.com/web/guides/quick-start)
