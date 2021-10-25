@@ -26,15 +26,17 @@ const Routes = (): JSX.Element => {
     <Router>
       <Grid container>
         <CssBaseline />
-        <Switch>
-          <PublicRoutes exact path="/login" component={Login} />
-          <PublicRoutes exact path="/signup" component={Signup} />
-          <ProtectedRoute exact path="/dashboard" component={Dashboard} />
-          <ProtectedRoute exact path="/profile" component={Profile} />
-          <ProtectedRoute exact path="/" component={Dashboard} />
-          <Route exact path="/404" component={NotFound} />
-          <Redirect to="/404" />
-        </Switch>
+        <Router>
+          <Switch>
+            <PublicRoutes exact path="/login" component={Login} />
+            <PublicRoutes exact path="/signup" component={Signup} />
+            <ProtectedRoute exact path="/dashboard" component={Dashboard} />
+            <ProtectedRoute exact path="/profile" component={Profile} />
+            <ProtectedRoute exact path="/" component={Dashboard} />
+            <Route exact path="/404" component={NotFound} />
+            <Redirect to="/404" />
+          </Switch>
+        </Router>
       </Grid>
     </Router>
   );

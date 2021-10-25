@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { ThemeProvider } from "@mui/material/styles";
 import i18next from "i18next";
 import { I18nextProvider } from "react-i18next";
+import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
+import { HelmetProvider } from "react-helmet-async";
 import englishTranslation from "./translations/en.json";
 import frenchTranslation from "./translations/fr.json";
 import { ColorModeContext } from "./utils/context";
@@ -9,7 +12,7 @@ import { themes } from "./utils/theme";
 import AppRouter from "./routes";
 import { useAppSelector } from "./hooks/reduxHooks";
 import { selectLocale } from "./redux/reducers/settings";
-import { HelmetProvider } from "react-helmet-async";
+import { store, persistor } from "./redux/store";
 
 i18next.init({
   interpolation: { escapeValue: false },
@@ -58,9 +61,13 @@ const App = (): JSX.Element => {
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
-        <HelmetProvider>
-          <AppWrapper />
-        </HelmetProvider>
+        <Provider store={store}>
+          <PersistGate persistor={persistor}>
+            <HelmetProvider>
+              <AppWrapper />
+            </HelmetProvider>
+          </PersistGate>
+        </Provider>
       </ThemeProvider>
     </ColorModeContext.Provider>
   );

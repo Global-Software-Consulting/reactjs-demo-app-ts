@@ -76,7 +76,7 @@ const LogIn = ({ loading, onSubmit }: LoginProps): JSX.Element => {
                   variant="outlined"
                   margin="normal"
                   fullWidth
-                  name="password"
+                  id="password"
                   label={translation("login.password.label")}
                   type="password"
                   error={Boolean(errors?.password)}
@@ -104,7 +104,7 @@ const LogIn = ({ loading, onSubmit }: LoginProps): JSX.Element => {
             </Button>
             <Grid container>
               <Grid item>
-                <Link to="/signup"> {translation("login.linkText")}</Link>
+                {/* <Link to="/signup"> {translation("login.linkText")}</Link> */}
               </Grid>
             </Grid>
           </form>

@@ -19,11 +19,11 @@ const LoginContainer = (): JSX.Element => {
   const [notification, setNotification] = React.useState<NotificationProps>({
     open: false,
     message: "",
-    severity: "success",
+    severity: "error",
   });
 
   const handleClose = () => {
-    setNotification({ open: false, message: "", severity: "success" });
+    setNotification({ open: false, message: "", severity: "error" });
   };
 
   const onSubmit = async (data: LoginCredProps) => {
