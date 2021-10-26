@@ -7,6 +7,6 @@ describe("Login Page", () => {
     cy.get("#password").type("testing@123");
     cy.get("#login").click();
     cy.wait(3000);
-    cy.location("pathname").should("include", "/profile");
+    cy.location("pathname").should("include", "/dashboard");
   });
 });
