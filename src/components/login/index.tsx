@@ -93,6 +93,7 @@ const LogIn = ({ loading, onSubmit }: LoginProps): JSX.Element => {
               variant="contained"
               color="primary"
               disabled={loading}
+              id="login"
             >
               {loading ? (
                 <CircularProgress
@@ -104,7 +105,7 @@ const LogIn = ({ loading, onSubmit }: LoginProps): JSX.Element => {
             </Button>
             <Grid container>
               <Grid item>
-                {/* <Link to="/signup"> {translation("login.linkText")}</Link> */}
+                <Link to="/signup"> {translation("login.linkText")}</Link>
               </Grid>
             </Grid>
           </form>

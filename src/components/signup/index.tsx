@@ -109,7 +109,7 @@ const Signup = ({ loading, onSubmit }: SignupProps): JSX.Element => {
                   variant="outlined"
                   margin="normal"
                   fullWidth
-                  name="password"
+                  id="password"
                   label={translation("signup.password.label")}
                   type="password"
                   error={Boolean(errors?.password)}
@@ -120,7 +120,13 @@ const Signup = ({ loading, onSubmit }: SignupProps): JSX.Element => {
               )}
             />
 
-            <Button type="submit" fullWidth variant="contained" color="primary">
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="primary"
+              id="signup"
+            >
               {loading ? (
                 <CircularProgress
                   style={{ color: "#fff", height: "20px", width: "20px" }}

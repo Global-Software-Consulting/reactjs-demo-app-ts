@@ -7,7 +7,7 @@ const PublicRoutes = ({ component, ...rest }: RouteProps): JSX.Element => {
     !localStorage.authToken ? (
       React.createElement(component, props)
     ) : (
-      <Redirect to={{ pathname: "/" }} />
+      <Redirect to={{ pathname: "/dashboard" }} />
     );
   return <Route {...rest} render={routeComponent} />;
 };

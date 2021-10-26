@@ -30,7 +30,7 @@ const LoginContainer = (): JSX.Element => {
     setLoading(true);
     const response = await dispatch(login(data));
     if (response.success) {
-      history.push("/");
+      history.push("/dashboard");
     } else {
       setNotification({
         open: true,

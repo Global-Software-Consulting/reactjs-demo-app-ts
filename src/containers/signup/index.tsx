@@ -30,7 +30,7 @@ const SignupContainer = (): JSX.Element => {
     setLoading(true);
     const response = await dispatch(signup(data));
     if (response.success) {
-      history.push("/");
+      history.push("/dashboard");
     } else {
       setNotification({
         open: true,
